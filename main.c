@@ -4,9 +4,10 @@
 #include <string.h>
 #include <locale.h>
 #include <sys/utsname.h>
+#include <sys/sysinfo.h>
 #include "config.h"
 
-#define VERSION "0.0.1"
+#define VERSION "0.0.2"
 
 char *get_pretty_name();
 void print_info(const char *type);
@@ -138,6 +139,28 @@ void print_info(const char *type) {
             fprintf(stderr, "(null)\n");
         else
             printf("%s\n", buffer.release);
+    }
+
+    else if (strcmp("uptime", type) == 0) {
+        struct sysinfo info;
+        printf("uptime - ");
+        if (sysinfo(&info) == 0) {
+            int days = info.uptime / 86400;
+            int hours = info.uptime / 3600;
+            int remaining = info.uptime % 3600;
+            int minutes = remaining / 60;
+            int seconds = remaining % 60;
+            if (days > 0) 
+                printf("%dd", days);
+            if (hours > 0)
+                printf("%dh", hours);
+            if (minutes > 0)
+                printf("%dm", minutes);
+            if (seconds > 0)
+                printf("%ds", seconds);
+            printf("\n");
+        } else
+            printf("(null) (failed to get uptime)\n");
     }
 
     else

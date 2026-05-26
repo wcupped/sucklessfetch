@@ -15,6 +15,7 @@ modules explanation:
 - terminal - current terminal
 - ker_ver - kernel version
 - locale - current locale
+- uptime - system uptime
 
 i'll add more modules soon, but you can also help me adding more of them
 

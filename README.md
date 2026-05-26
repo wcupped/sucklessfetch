@@ -8,13 +8,13 @@ sucklessfetch - is a fetch utility for linux written on C, it's just ez to confi
 # config
 there is a `config.def.h` in the root directory of project, cp or mv it as `config.h`
 modules explanation:
-uah - username and hostname
-separator - don't u understand it urself??
-distro - distro and its architecture
-shell - current shell
-terminal - current terminal
-ker_ver - kernel version
-locale - current locale
+- uah - username and hostname
+- separator - don't u understand it urself??
+- distro - distro and its architecture
+- shell - current shell
+- terminal - current terminal
+- ker_ver - kernel version
+- locale - current locale
 
 i'll add more modules soon, but you can also help me adding more of them
 

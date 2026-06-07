@@ -122,7 +122,7 @@ void print_info(const char *type) {
     }
 
     else if (strcmp("locale", type) == 0) {
-        char *locale = setlocale(LC_ALL, "");
+        char *locale = setlocale(LC_ALL, NULL);
         printf("locale - ");
 
         if (locale == NULL)

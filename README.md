@@ -17,6 +17,18 @@ modules explanation:
 - locale - current locale
 - uptime - system uptime
 
+it looks like
+```
+cupped@void
+**************************
+distro - Void Linux x86_64
+uptime - 10m10s
+shell - /bin/bash
+terminal - alacritty
+kernel version - 6.18.34_1
+locale - C
+```
+
 i'll add more modules soon, but you can also help me adding more of them
 
 # compilation

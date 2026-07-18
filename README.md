@@ -3,7 +3,7 @@ expect trash and 20 year code from stack overflow, cuz it's me.
 
 
 # what is this
-sucklessfetch - is a fetch utility for linux written on C, it's just ez to configure, because it uses config.h as it's config, it's some kind of "sequel" to my utility - lightfetch, my and maybe ur goal, is to make cool and minimalistic fetch util, that is made in suckless style
+sucklessfetch - is a fetch utility for linux written on C, it's just ez to configure, because it uses config.h as it's config, it's some kind of "sequel" to my utility - lightfetch, my and maybe ur goal, is to make cool and minimalistic fetch util, that is following suckless philosophy
 
 # config
 there is a `config.h` in the root directory of project, you can modify it or do anything u want with it

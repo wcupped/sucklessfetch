@@ -7,7 +7,7 @@
 #include <sys/sysinfo.h>
 #include "config.h"
 
-#define VERSION "0.0.2"
+#define VERSION "0.0.3"
 
 char *get_pretty_name();
 void print_info(const char *type);
@@ -122,13 +122,13 @@ void print_info(const char *type) {
     }
 
     else if (strcmp("locale", type) == 0) {
-        char *locale = setlocale(LC_ALL, NULL);
+        char *locale = setlocale(LC_ALL, "");
         printf("locale - ");
 
-        if (locale == NULL)
-            fprintf(stderr, "(null)\n");
+        if (locale != NULL)
+            printf("%s\n", locale);
         else
-            printf("%s\n", setlocale(LC_ALL, NULL));
+            fprintf(stderr, "(null)");
     }
 
     else if (strcmp("ker_ver", type) == 0) {

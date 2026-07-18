@@ -18,3 +18,5 @@ uninstall:
 
 clean:
 	rm -f $(TARGET)
+
+r: clean $(TARGET)
